@@ -6,7 +6,7 @@ export const ApolloClientProvider: React.FC<any> = ({ children }) => {
     cache: new InMemoryCache(),
     uri: `http://localhost:4000/graphql`,
     headers: {
-      Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjFkNTYxYzQwZmVlYzg4M2M1MWMzZDc1IiwiZW1haWwiOiJ0ZXN0aW5nMTIzNEBnbWFpbC5jb20iLCJpYXQiOjE2NDI2NDY3NzUsImV4cCI6MTY0MjY1Mzk3NX0.quGY-2VKvgMXJXpVuJ-j1TIFrkaid9EW2oqeO2NwNSg`,
+      Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjFkNTYxYzQwZmVlYzg4M2M1MWMzZDc1IiwiZW1haWwiOiJ0ZXN0aW5nMTIzNEBnbWFpbC5jb20iLCJpYXQiOjE2NDI2ODUzNTgsImV4cCI6MTY0MjY5MjU1OH0.ghXMokVvN-9QRvgSy-UD2RtaLLEVoFqrEn4Cf2m9wAU`,
     },
   });
 

@@ -1,7 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Box, Input, Text } from "../common-components";
+import { REQUEST_LOGIN } from '../graphql'
+import { useMutation } from '@apollo/client';
 
-export const LoginBox = () => {
+type LoginBoxType = {
+  setClicked: Function;
+}
+
+export const LoginBox: React.FC<LoginBoxType> = ({ setClicked }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -15,6 +21,8 @@ export const LoginBox = () => {
       items="center"
       display="flex"
       position="absolute"
+      top={0}
+      right={0}
     >
       <Box
         position="absolute"
@@ -22,13 +30,14 @@ export const LoginBox = () => {
         height="100%"
         background="black"
         op={0.6}
+        onClick={() => setClicked(false)}
       ></Box>
       <Box
         width="300px"
         height="300px"
         display="flex"
         direction="column"
-        background='#669DB3FF'
+        background='#6CD6FC'
         justify="space-evenly"
         items="center"
         z={1}

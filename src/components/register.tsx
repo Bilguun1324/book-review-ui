@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Box, Input, colors, Text } from "../common-components";
 
-export const RegisterBox = () => {
+type RegisterBoxType = {
+  setClicked: Function;
+}
+
+export const RegisterBox:React.FC<RegisterBoxType> = ({ setClicked }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -17,22 +21,23 @@ export const RegisterBox = () => {
       items="center"
       display="flex"
       position="absolute"
-    //   top='0px'
-    //   right='0px'
+      top={0}
+      right={0}
     >
       <Box
         position="absolute"
         width="100%"
         height="100%"
-        color="black"
+        background="black"
         op={0.6}
+        onClick={() => setClicked(false)}
       ></Box>
       <Box
         width="300px"
         height="300px"
         display="flex"
         direction="column"
-        color={colors.mainColor}
+        background='#6CD6FC'
         justify="space-evenly"
         items="center"
         z={1}

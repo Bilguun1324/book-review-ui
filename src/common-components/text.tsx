@@ -2,9 +2,10 @@ import styled from 'styled-components'
 
 type TextType = {
     position?: 'absolute' | 'relative';
-    background?: '#669DB3FF' | '#F0F6F7FF';
-    fs?: number;
+    color?: '#190B0D' | '#F0F6F7FF' | '#FC6C85';
+    fs?: string;
     textAlign?: string;
+    fw?: 400 | 500 | 600 | 'bold';
 }
 
 export const Text = styled.div<TextType>`
@@ -12,4 +13,5 @@ export const Text = styled.div<TextType>`
     color: ${props => props.color};
     text-align: ${props => props.textAlign};
     position: ${props => props.position};
+    font-weight: ${props => props.fw};
 `
